@@ -26,7 +26,7 @@ I love you buggu ji 💌,
 mujhe aapki yaaad aarhi h 😞
 aap kab jaoge nani ke yaha se
 
-aur haa aap yaa se mujhe unblock kr dena tb tk me aapka wait kr rha hu and ,
+aur haa aap yaha see jana to mujhe unblock kr dena tb tk me aapka wait kr rha hu and ,
 .
 
 Thank you for staying with me through everything.
@@ -42,6 +42,10 @@ I love you 💋💋💋💋💋
 🌸🌺🪷
 Thank you for being my peace, my joy, and my home.
 
+aapki yaad aarhi h bahut 🥺🥺
+and unblock kr hi dena jane ke baad 
+aur paani peete rehna 
+take care, and junk food abhi avoid krha 
 I love you endlessly.
 
 Ummmmmaaaaaah 💋💋💋💋
@@ -50,38 +54,42 @@ Ummmmmaaaaaah 💋💋💋💋
 let i = 0;
 
 function typeLetter() {
-  let t = setInterval(() => {
-    textEl.innerHTML += message[i];
-    i++;
-    
-    if (i >= message.length) {
-      clearInterval(t);
-      setTimeout(showProposal, 800);
-    }
-  }, 40);
+    let t = setInterval(() => {
+        textEl.innerHTML += message[i];
+        i++;
+
+        if (i >= message.length) {
+            clearInterval(t);
+
+            // Message complete hone ke baad sirf Next button dikhega
+            nextBtn.classList.add("show");
+        }
+    }, 4000);
 }
 
-/* 💍 SHOW PROPOSAL */
+
+/* 💍 SHOW PROPOSAL — ONLY NEXT BUTTON */
 function showProposal() {
-  letter.classList.remove("show");
-  proposal.classList.add("show");
-  
-  music.play; 
-  
-  /* ring animation */
-  setTimeout(() => {
-    ring.classList.add("show");
-  }, 600);
+    letter.classList.remove("show");
+    proposal.classList.add("show");
+
+    music.play();
+
+    setTimeout(() => {
+        ring.classList.add("show");
+    }, 600);
 }
+
+
+/* NEXT BUTTON */
+nextBtn.addEventListener("click", showProposal);
+
 
 /* 💍 TAKE RING */
 function takeRing() {
-  
-  ring.style.transform = "scale(1.3)";
-  ring.style.filter = "drop-shadow(0 0 40px gold)";
-  
-  setTimeout(() => {
-    alert("love you sooo much my buggu 💌💋");
-  }, 1000);
-  
-}
+    ring.style.transform = "scale(1.3)";
+    ring.style.filter = "drop-shadow(0 0 40px rgba(255,255,255,.8))";
+
+    setTimeout(() => {
+        alert("love you sooo much my buggu 💌💋");
+    }, 1000);
